@@ -1,4 +1,4 @@
-# GizmoBuy (Backend) - A multi vendor e-commerce platform
+# Shopfinity (Backend) - A multi vendor e-commerce platform
 
 ## Features
 
