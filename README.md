@@ -22,10 +22,6 @@
 - then, build the project using `npm run build` command.
 - at last, run the project using `npm run start:dev` command.
 
-### live link
-
-- client: https://gizmobuy.vercel.app
-- server: https://gizmobuy-backend.vercel.app
 
 ### DEMO LOGIN DETAILS
 
