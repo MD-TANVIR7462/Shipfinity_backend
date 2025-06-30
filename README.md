@@ -1,5 +1,7 @@
 # Shopfinity (Backend) - A multi vendor e-commerce platform
 
+## Currently Under Development.......
+
 ## Features
 
 - JWT based secure authorization system with password hashing.
@@ -23,16 +25,4 @@
 - at last, run the project using `npm run start:dev` command.
 
 
-### DEMO LOGIN DETAILS
 
-      * Customer :
-          - email: democustomer@gmail.com
-          - password: customer123
-
-      * Vendor :
-          - email: demovendor@gmail.com
-          - password: vendor123
-
-      * Admin :
-          - email: demoadmin@gmail.com
-          - password: admin123
