@@ -26,8 +26,6 @@ const getAllProducts = catchAsync(async (req, res) => {
     statusCode: httpStatus.OK,
     success: true,
     message: 'All products fetched successfully',
-    warning:
-      'ডাটাগুলা অনেক সময় দিয়ে, কষ্ট করে বানাইছি ভাই চ্যাটজিপিটি দিয়ে।  প্লিজ চুরি করবেন না নিজের প্রজেক্ট এর জন্য, আমি ধরতে পারলে কিন্তু মামলা করে দিবো সত্যি সত্যি।  কমিউনিটি তে তো চোর হিসেবে মুখোশ খুলে দিবোই ',
     data: result,
   });
 });

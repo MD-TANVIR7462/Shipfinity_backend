@@ -10,14 +10,15 @@ async function main() {
   try {
     await mongoose.connect(config.database_url as string);
 
-    server = app.listen(config.port, () => {
+    const PORT = 5000; // 👈 explicitly set to 5000
+
+    server = app.listen(PORT, () => {
       console.log(
-        `Connected to gizmobuy server and app is listening to port ${config.port}`
-          .rainbow.bold,
+        `✅ Connected to Shopfinity server and listening on http://localhost:${PORT}`,
       );
     });
   } catch (err) {
-    console.log(err);
+    console.error('❌ Failed to connect:', err);
   }
 }
 
@@ -26,7 +27,7 @@ main();
 //if any error happens in async code, it will be caught here
 process.on('unhandledRejection', () => {
   console.log(
-    `unahandledRejection is detected , gizmobuy server is shutting down ...`,
+    `unahandledRejection is detected , shopfinity server is shutting down ...`,
   );
   if (server) {
     server.close(() => {
@@ -39,7 +40,7 @@ process.on('unhandledRejection', () => {
 //if any error happens in sync code, it will be caught here
 process.on('uncaughtException', () => {
   console.log(
-    `uncaughtException is detected , gizmobuy server is shutting down ...`,
+    `uncaughtException is detected , shopfinity server is shutting down ...`,
   );
   process.exit(1);
 });

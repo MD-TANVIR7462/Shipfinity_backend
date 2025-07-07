@@ -64,3 +64,7 @@ export type TDecodedUser = {
 export interface TUserModel extends Model<TUser> {
   isUserExistsWithEmail(email: string): Promise<TUser | null>;
 }
+
+
+
+
