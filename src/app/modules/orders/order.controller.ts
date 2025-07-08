@@ -9,7 +9,7 @@ import { OrderServices } from './order.service';
 // init payment
 const initPayment = catchAsync(async (req, res) => {
   const response = await OrderServices.initiatePayment(req.body);
-
+console.log(response)
   sendResponse(res, {
     statusCode: httpStatus.OK,
     success: true,

@@ -355,7 +355,7 @@ const forgetPasswordInDB = async (userEmail: string) => {
     expiresIn: '5m',
   });
 
-  const resetUrl = `${'https://gizmobuy.vercel.app'}/forgot-password?email=${userEmail}&token=${resettoken}`;
+  // const resetUrl = `${'https://url.vercel.app'}/forgot-password?email=${userEmail}&token=${resettoken}`;
 
   // const msg = sendEmail(userFromDB?.email, resetUI(resetUrl));
 
