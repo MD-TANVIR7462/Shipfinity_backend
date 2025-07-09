@@ -54,9 +54,9 @@ const initiatePayment = async (order: TOrder) => {
       0,
       10,
     )}${Date.now().toString().slice(7, 11)}`,
-    success_url: `http://localhost:5000/api/orders/success?orderId=${order?.orderId}`,
-    fail_url: `http://localhost:5000/api/orders/fail?orderId=${order?.orderId}`,
-    cancel_url: `http://localhost:5000/api/orders/cancel?orderId=${order?.orderId}`,
+    success_url: `https://shipfinity-backend.vercel.app/api/orders/success?orderId=${order?.orderId}`,
+    fail_url: `https://shipfinity-backend.vercel.app/api/orders/fail?orderId=${order?.orderId}`,
+    cancel_url: `https://shipfinity-backend.vercel.app/api/orders/cancel?orderId=${order?.orderId}`,
     ipn_url: '',
     shipping_method: 'Courier',
     product_name: 'shopfinity',
@@ -113,7 +113,7 @@ const createOrderInDB = async (req: any) => {
     },
     { new: true },
   );
-  return { redirectUrl: 'http://localhost:5173/order-success' };
+  return { redirectUrl: 'https://myshopfinity.vercel.app/order-success' };
 };
 
 // delete order from DB for failed payment
@@ -124,7 +124,7 @@ const deleteOrderForFailedPayment = async (req: any) => {
   // delete order
   await OrderModel.findOneAndDelete({ orderId });
 
-  return { redirectUrl: 'http://localhost:5173/order-fail' };
+  return { redirectUrl: 'https://myshopfinity.vercel.app/order-fail' };
 };
 
 // delete order from DB for cancelled payment
@@ -135,7 +135,7 @@ const deleteOrderForCancelledPayment = async (req: any) => {
   // delete order
   await OrderModel.findOneAndDelete({ orderId });
 
-  return { redirectUrl: 'http://localhost:5173/order-cancel' };
+  return { redirectUrl: 'https://myshopfinity.vercel.app/order-cancel' };
 };
 
 // get sells history for admin
