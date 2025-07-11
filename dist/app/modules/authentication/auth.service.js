@@ -183,9 +183,9 @@ const changePasswordInDB = (passwordData, user) => __awaiter(void 0, void 0, voi
     if (!userFromDB) {
         throw new jsonwebtoken_1.JsonWebTokenError('Unauthorized Access!');
     }
-    if ((userFromDB === null || userFromDB === void 0 ? void 0 : userFromDB.email) === 'demoadmin@gmail.com' ||
-        (userFromDB === null || userFromDB === void 0 ? void 0 : userFromDB.email) === 'democustomer@gmail.com' ||
-        (userFromDB === null || userFromDB === void 0 ? void 0 : userFromDB.email) === 'demovendor@gmail.com') {
+    if ((userFromDB === null || userFromDB === void 0 ? void 0 : userFromDB.email) === "customer@gmail.com" ||
+        (userFromDB === null || userFromDB === void 0 ? void 0 : userFromDB.email) === "tanvir.dev3@gmail.com" ||
+        (userFromDB === null || userFromDB === void 0 ? void 0 : userFromDB.email) === "admin@gmail.com") {
         throw new AppError_1.default(http_status_1.default.BAD_REQUEST, 'Password change is not allowed for this demo account');
     }
     const currentAccesstokenIssuedAt = (user === null || user === void 0 ? void 0 : user.iat) * 1000;

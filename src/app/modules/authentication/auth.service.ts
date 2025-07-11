@@ -202,9 +202,9 @@ const changePasswordInDB = async (
   }
 
   if (
-    userFromDB?.email === 'demoadmin@gmail.com' ||
-    userFromDB?.email === 'democustomer@gmail.com' ||
-    userFromDB?.email === 'demovendor@gmail.com'
+    userFromDB?.email === "customer@gmail.com" ||
+    userFromDB?.email === "tanvir.dev3@gmail.com" ||
+    userFromDB?.email === "admin@gmail.com"
   ) {
     throw new AppError(
       httpStatus.BAD_REQUEST,
