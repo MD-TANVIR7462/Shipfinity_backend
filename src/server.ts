@@ -10,7 +10,7 @@ async function main() {
   try {
     await mongoose.connect(config.database_url as string);
 
-    const PORT = 5000; // 👈 explicitly set to 5000
+    const PORT = 5000; 
 
     server = app.listen(PORT, () => {
       console.log(
