@@ -21,7 +21,7 @@ function main() {
     return __awaiter(this, void 0, void 0, function* () {
         try {
             yield mongoose_1.default.connect(config_1.default.database_url);
-            const PORT = 5000; // 👈 explicitly set to 5000
+            const PORT = 5000;
             server = app_1.default.listen(PORT, () => {
                 console.log(`✅ Connected to Shopfinity server and listening on http://localhost:${PORT}`);
             });

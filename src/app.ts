@@ -15,7 +15,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
   cors({
-    origin: ['https://myshopfinity.vercel.app', 'http://localhost:5173'],
+    origin: ['https://myshopfinity.vercel.app', 'http://localhost:5173','https://mirtex.vercel.app'],
     credentials: true,
   }),
 );
